@@ -8,6 +8,13 @@ public class Griffindor extends hogwarts {
         this.honor = honor;
         this.bravery = bravery;
     }
+    @Override
+    public String toString() {
+        return super.toString() +
+                ", nobility " + nobility +
+                ", honor " + honor +
+                ", bravery " + bravery;
+    }
     public static void checkWhoIsTheBetterStudentInGriffndor (int indexOfStudent_1, int indexOfStudent_2){
         Griffindor[] griffindors = getGriffindors();
         int sumOfQualities_1 = griffindors[indexOfStudent_1].getBravery() + griffindors[indexOfStudent_1].getHonor() + griffindors[indexOfStudent_1].getBravery() ;

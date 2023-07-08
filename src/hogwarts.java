@@ -8,14 +8,11 @@ public class hogwarts {
     private static Griffindor[] griffindors;
     private static Ravenclaw[] ravenclaws;
     private static Hufflepuff[] hufflepuffs;
-
-
     public hogwarts(String fullName, int sorcery, int transgression) {
         this.fullName = fullName;
         this.sorcery = sorcery;
         this.transgression = transgression;
     }
-
     public hogwarts() {
         slytherins = new Slytherin[3];
         slytherins[0] = new Slytherin("Драко Малфой", 59, 65, 66, 69, 79, 65, 77);
@@ -37,21 +34,19 @@ public class hogwarts {
         hufflepuffs[1] = new Hufflepuff("Седрик Диггори", 75, 69, 56, 59, 55);
         hufflepuffs[2] = new Hufflepuff("Джастин Финч-Флетчли", 57, 62, 51, 55, 65);
     }
-
     public void printOneStudent(String faculty, int indexOfStudent) {
         if (faculty.equalsIgnoreCase("Slytherin")) {
-            System.out.println("slytherin student: \n" + slytherins[indexOfStudent] + slytherins[indexOfStudent].toStringSlytherin(indexOfStudent));
+            System.out.println("slytherin student: \n" + slytherins[indexOfStudent] );
         } else if (faculty.equalsIgnoreCase("Griffindor")) {
-            System.out.println("griffindor student: \n" + griffindors[indexOfStudent] + griffindors[indexOfStudent].toStringGriffindor(indexOfStudent));
+            System.out.println("griffindor student: \n" + griffindors[indexOfStudent] );
         } else if (faculty.equalsIgnoreCase("Ravenclaw")) {
-            System.out.println("ravenclaw student: \n" + ravenclaws[indexOfStudent] + ravenclaws[indexOfStudent].toStringRavenclaw(indexOfStudent));
+            System.out.println("ravenclaw student: \n" + ravenclaws[indexOfStudent] );
         } else if (faculty.equalsIgnoreCase("Hufflepuff")) {
-            System.out.println("hufflepuff student: \n" + hufflepuffs[indexOfStudent] + hufflepuffs[indexOfStudent].toStringHufflepuff(indexOfStudent));
+            System.out.println("hufflepuff student: \n" + hufflepuffs[indexOfStudent] );
         } else {
             System.out.println("Enter right name of faculty!!!");
         }
     }
-
     public void checkWhoIsBetterInCommonSkills(int indexOfStudent_1, int indexOfStudent_2) {
         hogwarts[] allStudents = new hogwarts[slytherins.length + griffindors.length + ravenclaws.length + hufflepuffs.length];
         int srcIndex = 0;
@@ -72,16 +67,10 @@ public class hogwarts {
         } else {
             System.out.println(allStudents[indexOfStudent_1].getFullName() + " и " + allStudents[indexOfStudent_2].getFullName() + ". Оба одинаково хороши. ");
         }
-
-//        for (int i = 0; i < slytherins.length + allStudents.length + ravenclaws.length + hufflepuffs.length; i++) {
-//            System.out.println(allStudents[i]);
-//        }
     }
-
     public String getFullName() {
         return fullName;
     }
-
     public int getSorcery() {
         return sorcery;
     }
@@ -114,40 +103,37 @@ public class hogwarts {
                         ", transgression = " + transgression;
     }
 
-    public String toStringSlytherin(int indexOfStudent) {
-        return
-                ", cunning = " + slytherins[indexOfStudent].getCunning() +
-                        ", determination = " + slytherins[indexOfStudent].getDetermination() +
-                        ", ambition = " + slytherins[indexOfStudent].getAmbition() +
-                        ", resoursefulness = " + slytherins[indexOfStudent].getResourcefulness() +
-                        ", thirstForPower = " + slytherins[indexOfStudent].getThirstForPower();
-    }
-
-    public String toStringRavenclaw(int indexOfStudent) {
-        return
-                ", smart = " + ravenclaws[indexOfStudent].getSmart() +
-                        ", witty = " + ravenclaws[indexOfStudent].getWitty() +
-                        ", creativity = " + ravenclaws[indexOfStudent].getCreativity() +
-                        ", wise = " + ravenclaws[indexOfStudent].getWise();
-    }
-
-    public String toStringHufflepuff(int indexOfStudent) {
-        return
-                ", hardworking = " + hufflepuffs[indexOfStudent].getHardworking() +
-                        ", loyality = " + hufflepuffs[indexOfStudent].getLoyality() +
-                        ", honest = " + hufflepuffs[indexOfStudent].getHonest();
-    }
-
-    public String toStringGriffindor(int indexOfStudent) {
-        return
-                ", nobility = " + griffindors[indexOfStudent].getNobility() +
-                        ", honor = " + griffindors[indexOfStudent].getHonor() +
-                        ", bravery = " + griffindors[indexOfStudent].getBravery();
-    }
-
-
 }
-
+//    public String toStringSlytherin(int indexOfStudent) {
+//        return
+//                ", cunning = " + slytherins[indexOfStudent].getCunning() +
+//                        ", determination = " + slytherins[indexOfStudent].getDetermination() +
+//                        ", ambition = " + slytherins[indexOfStudent].getAmbition() +
+//                        ", resoursefulness = " + slytherins[indexOfStudent].getResourcefulness() +
+//                        ", thirstForPower = " + slytherins[indexOfStudent].getThirstForPower();
+//    }
+//
+//    public String toStringRavenclaw(int indexOfStudent) {
+//        return
+//                ", smart = " + ravenclaws[indexOfStudent].getSmart() +
+//                        ", witty = " + ravenclaws[indexOfStudent].getWitty() +
+//                        ", creativity = " + ravenclaws[indexOfStudent].getCreativity() +
+//                        ", wise = " + ravenclaws[indexOfStudent].getWise();
+//    }
+//
+//    public String toStringHufflepuff(int indexOfStudent) {
+//        return
+//                ", hardworking = " + hufflepuffs[indexOfStudent].getHardworking() +
+//                        ", loyality = " + hufflepuffs[indexOfStudent].getLoyality() +
+//                        ", honest = " + hufflepuffs[indexOfStudent].getHonest();
+//    }
+//
+//    public String toStringGriffindor(int indexOfStudent) {
+//        return
+//                ", nobility = " + griffindors[indexOfStudent].getNobility() +
+//                        ", honor = " + griffindors[indexOfStudent].getHonor() +
+//                        ", bravery = " + griffindors[indexOfStudent].getBravery();
+//    }
 
 //    public int checkForNull(int indexOfStudent) {
 //

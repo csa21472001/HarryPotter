@@ -15,6 +15,15 @@ public class Slytherin extends hogwarts {
         this.resourcefulness = resourcefulness;
         this.thirstForPower = thirstForPower;
     }
+    @Override
+    public String toString() {
+        return super.toString() +
+                ", cunning = " + cunning +
+                ", determination = " + determination +
+                ", ambition = " + ambition +
+                ", resoursefulness = " + resourcefulness +
+                ", thirstForPower = " + thirstForPower;
+    }
 
     public static void checkWhoIsTheBetterStudentInSlytherin(int indexOfStudent_1, int indexOfStudent_2) {
         Slytherin[] slytherins = getSlytherins();

@@ -11,7 +11,14 @@ public class Ravenclaw extends hogwarts {
         this.witty = witty;
         this.creativity = creativity;
     }
-
+    @Override
+    public String toString() {
+        return super.toString() +
+                ", smart = " + smart +
+                ", witty = " + witty +
+                ", creativity = " + creativity +
+                ", wise = " + wise;
+    }
     public static void checkWhoIsTheBetterStudentInRavenclaw(int indexOfStudent_1, int indexOfStudent_2) {
         Ravenclaw[] ravenclaws = getRavenclaws();
         int sumOfQualities_1 = ravenclaws[indexOfStudent_1].getCreativity() + ravenclaws[indexOfStudent_1].getWise() + ravenclaws[indexOfStudent_1].getWitty() + ravenclaws[indexOfStudent_1].getSmart();

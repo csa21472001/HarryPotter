@@ -9,7 +9,13 @@ public class Hufflepuff extends hogwarts {
         this.loyality = loyality;
         this.honest = honest;
     }
-
+    @Override
+    public String toString() {
+        return super.toString() +
+                ", hardworking = " + hardworking +
+                ", loyality = " + loyality +
+                ", honest = " + honest;
+    }
     public static void checkWhoIsTheBetterStudentInRavenclaw(int indexOfStudent_1, int indexOfStudent_2) {
         Hufflepuff[] hufflepuffs = getHufflepuffs();
         int sumOfQualities_1 = hufflepuffs[indexOfStudent_1].getHardworking() + hufflepuffs[indexOfStudent_1].getHonest() + hufflepuffs[indexOfStudent_1].getLoyality();
