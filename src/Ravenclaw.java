@@ -14,8 +14,8 @@ public class Ravenclaw extends hogwarts {
 
     public static void checkWhoIsTheBetterStudentInRavenclaw(int indexOfStudent_1, int indexOfStudent_2) {
         Ravenclaw[] ravenclaws = getRavenclaws();
-        int sumOfQualities_1 = ravenclaws[indexOfStudent_1].getSorcery() + ravenclaws[indexOfStudent_1].getTransgression() + ravenclaws[indexOfStudent_1].getCreativity() + ravenclaws[indexOfStudent_1].getWise() + ravenclaws[indexOfStudent_1].getWitty() + ravenclaws[indexOfStudent_1].getSmart();
-        int sumOfQualities_2 = ravenclaws[indexOfStudent_2].getTransgression() + ravenclaws[indexOfStudent_2].getSorcery() + ravenclaws[indexOfStudent_2].getCreativity() + ravenclaws[indexOfStudent_2].getWise() + ravenclaws[indexOfStudent_2].getWitty() + ravenclaws[indexOfStudent_2].getSmart();
+        int sumOfQualities_1 = ravenclaws[indexOfStudent_1].getCreativity() + ravenclaws[indexOfStudent_1].getWise() + ravenclaws[indexOfStudent_1].getWitty() + ravenclaws[indexOfStudent_1].getSmart();
+        int sumOfQualities_2 = ravenclaws[indexOfStudent_2].getCreativity() + ravenclaws[indexOfStudent_2].getWise() + ravenclaws[indexOfStudent_2].getWitty() + ravenclaws[indexOfStudent_2].getSmart();
         if (sumOfQualities_2 > sumOfQualities_1) {
             System.out.println(ravenclaws[indexOfStudent_2].getFullName() + " лучший Когтеврановец, чем " + ravenclaws[indexOfStudent_1].getFullName());
         } else if (sumOfQualities_1 > sumOfQualities_2) {

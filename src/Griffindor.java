@@ -10,8 +10,8 @@ public class Griffindor extends hogwarts {
     }
     public static void checkWhoIsTheBetterStudentInGriffndor (int indexOfStudent_1, int indexOfStudent_2){
         Griffindor[] griffindors = getGriffindors();
-        int sumOfQualities_1 = griffindors[indexOfStudent_1].getSorcery() +griffindors[indexOfStudent_1].getTransgression()+ griffindors[indexOfStudent_1].getBravery() + griffindors[indexOfStudent_1].getHonor() + griffindors[indexOfStudent_1].getBravery() ;
-        int sumOfQualities_2 = griffindors[indexOfStudent_2].getTransgression()+griffindors[indexOfStudent_2].getSorcery()+griffindors[indexOfStudent_2].getBravery() + griffindors[indexOfStudent_2].getHonor() + griffindors[indexOfStudent_2].getBravery();
+        int sumOfQualities_1 = griffindors[indexOfStudent_1].getBravery() + griffindors[indexOfStudent_1].getHonor() + griffindors[indexOfStudent_1].getBravery() ;
+        int sumOfQualities_2 = griffindors[indexOfStudent_2].getBravery() + griffindors[indexOfStudent_2].getHonor() + griffindors[indexOfStudent_2].getBravery();
         if (sumOfQualities_2 > sumOfQualities_1) {
             System.out.println(griffindors[indexOfStudent_2].getFullName() + " лучший Гриффиндоровец, чем " + griffindors[indexOfStudent_1].getFullName());
         } else if (sumOfQualities_1 > sumOfQualities_2) {

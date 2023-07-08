@@ -18,8 +18,8 @@ public class Slytherin extends hogwarts {
 
     public static void checkWhoIsTheBetterStudentInSlytherin(int indexOfStudent_1, int indexOfStudent_2) {
         Slytherin[] slytherins = getSlytherins();
-        int sumOfQualities_1 = slytherins[indexOfStudent_1].getSorcery() + slytherins[indexOfStudent_1].getTransgression() + slytherins[indexOfStudent_1].getCunning() + slytherins[indexOfStudent_1].getDetermination() + slytherins[indexOfStudent_1].getAmbition() + slytherins[indexOfStudent_1].getResourcefulness() + slytherins[indexOfStudent_1].getThirstForPower();
-        int sumOfQualities_2 = slytherins[indexOfStudent_2].getTransgression() + slytherins[indexOfStudent_2].getSorcery() + slytherins[indexOfStudent_2].getCunning() + slytherins[indexOfStudent_2].getDetermination() + slytherins[indexOfStudent_2].getAmbition() + slytherins[indexOfStudent_2].getResourcefulness() + slytherins[indexOfStudent_2].getThirstForPower();
+        int sumOfQualities_1 = slytherins[indexOfStudent_1].getCunning() + slytherins[indexOfStudent_1].getDetermination() + slytherins[indexOfStudent_1].getAmbition() + slytherins[indexOfStudent_1].getResourcefulness() + slytherins[indexOfStudent_1].getThirstForPower();
+        int sumOfQualities_2 = slytherins[indexOfStudent_2].getCunning() + slytherins[indexOfStudent_2].getDetermination() + slytherins[indexOfStudent_2].getAmbition() + slytherins[indexOfStudent_2].getResourcefulness() + slytherins[indexOfStudent_2].getThirstForPower();
         if (sumOfQualities_2 > sumOfQualities_1) {
             System.out.println(slytherins[indexOfStudent_2].getFullName() + " лучший Слизериновец, чем " + slytherins[indexOfStudent_1].getFullName());
         } else if (sumOfQualities_1 > sumOfQualities_2) {
