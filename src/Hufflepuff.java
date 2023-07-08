@@ -16,7 +16,7 @@ public class Hufflepuff extends hogwarts {
                 ", loyality = " + loyality +
                 ", honest = " + honest;
     }
-    public static void checkWhoIsTheBetterStudentInRavenclaw(int indexOfStudent_1, int indexOfStudent_2) {
+    public static void checkWhoIsTheBetterStudentInHufflepuf(int indexOfStudent_1, int indexOfStudent_2) {
         Hufflepuff[] hufflepuffs = getHufflepuffs();
         int sumOfQualities_1 = hufflepuffs[indexOfStudent_1].getHardworking() + hufflepuffs[indexOfStudent_1].getHonest() + hufflepuffs[indexOfStudent_1].getLoyality();
         int sumOfQualities_2 = hufflepuffs[indexOfStudent_2].getHardworking() + hufflepuffs[indexOfStudent_2].getHonest() + hufflepuffs[indexOfStudent_2].getLoyality();

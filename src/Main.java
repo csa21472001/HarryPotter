@@ -4,14 +4,14 @@ public class Main {
     public static void main(String[] args) {
 //2
         hogwarts hogwartsStudents = new hogwarts();
-        int indexOfStudent = 1;
-        String faculty = "Hufflepuff";
+        int indexOfStudent = 2;
+        String faculty = "hufflepuff";
         hogwartsStudents.printOneStudent(faculty, indexOfStudent);
 //3
         int indexOfStudent_1 = 1;
         int indexOfStudent_2 = 0;
         Ravenclaw.checkWhoIsTheBetterStudentInRavenclaw(indexOfStudent_1, indexOfStudent_2);
-        Hufflepuff.checkWhoIsTheBetterStudentInRavenclaw(indexOfStudent_1, indexOfStudent_2);
+        Hufflepuff.checkWhoIsTheBetterStudentInHufflepuf(indexOfStudent_1, indexOfStudent_2);
         Slytherin.checkWhoIsTheBetterStudentInSlytherin(indexOfStudent_1, indexOfStudent_2);
         Griffindor.checkWhoIsTheBetterStudentInGriffndor(indexOfStudent_1, indexOfStudent_2);
 //4
