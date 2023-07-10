@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class Slytherin extends hogwarts {
+public class Slytherin extends Hogwarts {
     private int cunning;
     private int determination;
     private int ambition;
@@ -15,6 +15,7 @@ public class Slytherin extends hogwarts {
         this.resourcefulness = resourcefulness;
         this.thirstForPower = thirstForPower;
     }
+
     @Override
     public String toString() {
         return super.toString() +
@@ -25,17 +26,21 @@ public class Slytherin extends hogwarts {
                 ", thirstForPower = " + thirstForPower;
     }
 
-    public static void checkWhoIsTheBetterStudentInSlytherin(int indexOfStudent_1, int indexOfStudent_2) {
-        Slytherin[] slytherins = getSlytherins();
-        int sumOfQualities_1 = slytherins[indexOfStudent_1].getCunning() + slytherins[indexOfStudent_1].getDetermination() + slytherins[indexOfStudent_1].getAmbition() + slytherins[indexOfStudent_1].getResourcefulness() + slytherins[indexOfStudent_1].getThirstForPower();
-        int sumOfQualities_2 = slytherins[indexOfStudent_2].getCunning() + slytherins[indexOfStudent_2].getDetermination() + slytherins[indexOfStudent_2].getAmbition() + slytherins[indexOfStudent_2].getResourcefulness() + slytherins[indexOfStudent_2].getThirstForPower();
+    protected void checkWhoIsTheBetterStudentInSlytherin(Slytherin slytherinStudent) {
+
+        int sumOfQualities_1 = slytherinStudent.getCunning() + slytherinStudent.getDetermination() + slytherinStudent.getAmbition() + slytherinStudent.getResourcefulness() + slytherinStudent.getThirstForPower();
+        int sumOfQualities_2 = this.cunning + this.determination + this.ambition + this.resourcefulness + this.thirstForPower;
         if (sumOfQualities_2 > sumOfQualities_1) {
-            System.out.println(slytherins[indexOfStudent_2].getFullName() + " лучший Слизериновец, чем " + slytherins[indexOfStudent_1].getFullName());
+            printWhoIsBetterStudent(this, slytherinStudent);
         } else if (sumOfQualities_1 > sumOfQualities_2) {
-            System.out.println(slytherins[indexOfStudent_1].getFullName() + " лучший Слизериновец, чем " + slytherins[indexOfStudent_2].getFullName());
+            printWhoIsBetterStudent(slytherinStudent, this);
         } else {
-            System.out.println(slytherins[indexOfStudent_1].getFullName() + " и " + slytherins[indexOfStudent_2].getFullName() + ". Оба одинаково хороши. ");
+            System.out.println(slytherinStudent.getFullName() + " и " + this.getFullName() + ". Оба одинаково хороши. ");
         }
+    }
+
+    public void printWhoIsBetterStudent(Slytherin betterStudent, Slytherin worseStudent) {
+        System.out.println(betterStudent.getFullName() + " лучший Cлизериновец, чем " + worseStudent.getFullName());
     }
 
     public int getCunning() {

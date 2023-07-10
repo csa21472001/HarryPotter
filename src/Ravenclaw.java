@@ -1,4 +1,4 @@
-public class Ravenclaw extends hogwarts {
+public class Ravenclaw extends Hogwarts {
     private int smart;
     private int wise;
     private int witty;
@@ -11,6 +11,7 @@ public class Ravenclaw extends hogwarts {
         this.witty = witty;
         this.creativity = creativity;
     }
+
     @Override
     public String toString() {
         return super.toString() +
@@ -19,16 +20,17 @@ public class Ravenclaw extends hogwarts {
                 ", creativity = " + creativity +
                 ", wise = " + wise;
     }
-    public static void checkWhoIsTheBetterStudentInRavenclaw(int indexOfStudent_1, int indexOfStudent_2) {
-        Ravenclaw[] ravenclaws = getRavenclaws();
-        int sumOfQualities_1 = ravenclaws[indexOfStudent_1].getCreativity() + ravenclaws[indexOfStudent_1].getWise() + ravenclaws[indexOfStudent_1].getWitty() + ravenclaws[indexOfStudent_1].getSmart();
-        int sumOfQualities_2 = ravenclaws[indexOfStudent_2].getCreativity() + ravenclaws[indexOfStudent_2].getWise() + ravenclaws[indexOfStudent_2].getWitty() + ravenclaws[indexOfStudent_2].getSmart();
+
+    protected void checkWhoIsTheBetterStudentInRavenclaw(Ravenclaw ravenclawStudent) {
+
+        int sumOfQualities_1 = ravenclawStudent.getSmart() + ravenclawStudent.getWitty() + ravenclawStudent.getCreativity() + ravenclawStudent.getWise();
+        int sumOfQualities_2 = this.smart + this.witty + this.creativity + this.wise;
         if (sumOfQualities_2 > sumOfQualities_1) {
-            System.out.println(ravenclaws[indexOfStudent_2].getFullName() + " лучший Когтеврановец, чем " + ravenclaws[indexOfStudent_1].getFullName());
+            System.out.println(this.getFullName() + " лучший Когтеврановец, чем " + ravenclawStudent.getFullName());
         } else if (sumOfQualities_1 > sumOfQualities_2) {
-            System.out.println(ravenclaws[indexOfStudent_1].getFullName() + " лучший Когтеврановец, чем " + ravenclaws[indexOfStudent_2].getFullName());
+            System.out.println(ravenclawStudent.getFullName() + " лучший Когтеврановец, чем " + this.getFullName());
         } else {
-            System.out.println(ravenclaws[indexOfStudent_1].getFullName() + " и " + ravenclaws[indexOfStudent_2].getFullName() + ". Оба одинаково хороши. ");
+            System.out.println(ravenclawStudent.getFullName() + " и " + this.getFullName() + ". Оба одинаково хороши. ");
         }
     }
 

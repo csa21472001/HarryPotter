@@ -1,13 +1,15 @@
-public class Griffindor extends hogwarts {
-    int nobility;
-    int honor;
-    int bravery;
-    public Griffindor(String fullName,int sorcery,int transgression,int nobility, int honor, int bravery) {
-        super ( fullName,sorcery,transgression);
+public class Griffindor extends Hogwarts {
+    private int nobility;
+    private int honor;
+    private int bravery;
+
+    public Griffindor(String fullName, int sorcery, int transgression, int nobility, int honor, int bravery) {
+        super(fullName, sorcery, transgression);
         this.nobility = nobility;
         this.honor = honor;
         this.bravery = bravery;
     }
+
     @Override
     public String toString() {
         return super.toString() +
@@ -15,18 +17,19 @@ public class Griffindor extends hogwarts {
                 ", honor " + honor +
                 ", bravery " + bravery;
     }
-    public static void checkWhoIsTheBetterStudentInGriffndor (int indexOfStudent_1, int indexOfStudent_2){
-        Griffindor[] griffindors = getGriffindors();
-        int sumOfQualities_1 = griffindors[indexOfStudent_1].getBravery() + griffindors[indexOfStudent_1].getHonor() + griffindors[indexOfStudent_1].getBravery() ;
-        int sumOfQualities_2 = griffindors[indexOfStudent_2].getBravery() + griffindors[indexOfStudent_2].getHonor() + griffindors[indexOfStudent_2].getBravery();
+
+    protected void checkWhoIsTheBetterStudentInGriffndor(Griffindor griffindorStudent) {
+        int sumOfQualities_1 = griffindorStudent.getBravery() + griffindorStudent.getHonor() + griffindorStudent.getNobility();
+        int sumOfQualities_2 = this.bravery + this.nobility + this.honor;
         if (sumOfQualities_2 > sumOfQualities_1) {
-            System.out.println(griffindors[indexOfStudent_2].getFullName() + " лучший Гриффиндоровец, чем " + griffindors[indexOfStudent_1].getFullName());
+            System.out.println(this.getFullName() + " лучший Гриффиндоровец, чем " + griffindorStudent.getFullName());
         } else if (sumOfQualities_1 > sumOfQualities_2) {
-            System.out.println(griffindors[indexOfStudent_1].getFullName() + " лучший Гриффиндоровец, чем " + griffindors[indexOfStudent_2].getFullName());
+            System.out.println(griffindorStudent.getFullName() + " лучший Гриффиндоровец, чем " + this.getFullName());
         } else {
-            System.out.println(griffindors[indexOfStudent_1].getFullName() + " и " + griffindors[indexOfStudent_2].getFullName() + ". Оба одинаково хороши. ");
+            System.out.println(griffindorStudent.getFullName() + " и " + this.getFullName() + ". Оба одинаково хороши. ");
         }
     }
+
     public int getNobility() {
         return nobility;
     }
