@@ -1,2 +1,2 @@
 # HarryPotter
-Гарри
+Гари
